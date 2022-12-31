@@ -11,16 +11,16 @@ import RxCocoa
 
 // root view model : 모든 뷰모델 요소를 감싸는 모델??
 struct ArticleListViewModel {
-    let articlesVM: [ArticleViewModel]
+    let articlesViewModel: [ArticleViewModel]
 }
 
 extension ArticleListViewModel {
     init(_ articles: [Article]) {
-        self.articlesVM = articles.compactMap(ArticleViewModel.init)// ??
+        self.articlesViewModel = articles.compactMap(ArticleViewModel.init)// ??
     }
     
     func articleAt(_ index: Int) -> ArticleViewModel {
-        return self.articlesVM[index]
+        return self.articlesViewModel[index]
     }
 }
 
